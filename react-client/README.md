@@ -4,6 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Prereqs
+
+Install Bootstrap using : npm install bootstrap --save 
+Install missing styled-components using : npm install styled-components --save
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
