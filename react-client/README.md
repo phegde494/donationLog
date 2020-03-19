@@ -8,6 +8,8 @@ In the project directory, you can run:
 
 Install Bootstrap using : npm install bootstrap --save 
 Install missing styled-components using : npm install styled-components --save
+Install missing axios using : npm install axios
+Install missing react-table using : npm install react-table
 
 ### `yarn start`
 
