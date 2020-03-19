@@ -105,11 +105,11 @@ class DonationsUpdate extends Component {
     }
 
     handleUpdateDonation = async () => {
-        const { FirstName, LastName, Birthdate, ParentFirstName, ParentLastName, Address, BankAccount, AmountPaidRS, Description, ChequeNumber } = this.state
+        const { id, FirstName, LastName, Birthdate, ParentFirstName, ParentLastName, Address, BankAccount, AmountPaidRS, Description, ChequeNumber } = this.state
         //const arrayTime = time.split('/')
         const payload = { FirstName, LastName, Birthdate, ParentFirstName, ParentLastName, Address, BankAccount, AmountPaidRS, Description, ChequeNumber}
 
-        await api.insertDonation(payload).then(res => {
+        await api.updateDonationById(id, payload).then(res => {
             window.alert(`Donation inserted successfully`)
             this.setState({
                 FirstName: '',
