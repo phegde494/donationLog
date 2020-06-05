@@ -153,6 +153,22 @@ $ mkdir db
 $ touch index.js
 
 This will create a new directory called db inside of the server folder, and a file called index.js inside of the server folder, as well.
+
+Within this index.js file, paste:
+
+
+const mongoose = require('mongoose')
+
+mongoose
+    .connect('mongodb://127.0.0.1:27017/cinema', { useNewUrlParser: true })
+    .catch(e => {
+        console.error('Connection error', e.message)
+    })
+
+const db = mongoose.connection
+
+module.exports = db
+
 From now on, when I’m referring to a file, I’ll put directory/file name to make it clear which file I’m talking about. This is because we’ll have multiple files of the same name later.
 
 This is the code you need to copy paste into server/index.js
@@ -435,7 +451,7 @@ Now, we have to create a .json file with the information about the donation.
     "ChequeNumber": "2284"
 }
 
-
+NOTE: Frontend instructions in progress...
 
 
 
